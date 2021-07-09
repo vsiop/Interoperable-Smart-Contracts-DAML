@@ -1,0 +1,32 @@
+daml 1.2
+module SmartCity where
+
+template Setup
+  with
+    station : Party
+    operator : Party
+    time : Text
+    date : Date
+    measurementID : Text
+    humidity : Text
+    temperature : Text
+    rainIntensidy : Text
+    windDirection : Text
+    windSpeed : Text
+    maxwindSpeed : Text
+    solarRadiation : Text 
+    batteryLife : Text
+  where
+    signatory station 
+    observer operator
+    
+template Image
+  with
+    station : Party
+    operator : Party
+    time : Text
+    date : Date
+    image : Text
+  where
+    signatory station 
+    observer operator
