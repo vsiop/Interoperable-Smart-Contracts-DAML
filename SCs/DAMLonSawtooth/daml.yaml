@@ -1,0 +1,13 @@
+sdk-version: 0.13.41
+name: SmartCity
+source: Daml
+version: 1.0.0
+parties:
+  - Operator
+  - User1
+  - User2
+  - User3
+dependencies:
+  - daml-prim
+  - daml-stdlib
+
