@@ -1,0 +1,55 @@
+daml 1.2
+module SmartCity where
+
+data FabricInfo = FabricInfo with
+  cid : Text
+  date : Date
+  time : Text
+ deriving(Eq, Show)
+
+data SawtoothParties = SawtoothParties with
+  participants : Party
+  operator : Party
+ deriving(Eq, Show)
+
+data WeatherData = WeatherData with
+    station : Text
+    time : Text
+    date : Date
+    measurementID : Text
+    humidity : Text
+    temperature : Text
+    rainIntensidy : Text
+    windDirection : Text
+    windSpeed : Text
+    maxwindSpeed : Text
+    solarRadiation : Text 
+    batteryLife : Text
+ deriving(Eq, Show)
+
+data Images = Images with
+    station : Text
+    time : Text
+    date : Date
+    image : Text
+ deriving(Eq, Show)
+
+
+template Data
+  with
+    fabricInfo : FabricInfo
+    sawtoothParties : SawtoothParties
+    weatherData : WeatherData
+  where
+    signatory sawtoothParties.operator
+    observer sawtoothParties.participants
+    
+
+template Image
+  with
+    fabricInfo : FabricInfo
+    sawtoothParties : SawtoothParties
+    images : Images
+  where
+    signatory sawtoothParties.operator
+    observer sawtoothParties.participants
