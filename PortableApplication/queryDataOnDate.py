@@ -1,9 +1,6 @@
-import json
-import os
+
 import dazl
 from datetime import date
-import base64
-import sys
 from configparser import ConfigParser
 
 parserFabric = ConfigParser()

@@ -1,20 +1,11 @@
-import csv
-import pandas as pd
-import numpy
-import json
+
 import logging
 import os
-import sys
 import time
 import base64
 from datetime import date
-from os.path import dirname, join
 import cv2
-import numpy as np
-
 import dazl
-from dazl.model.reading import ReadyEvent, ContractCreateEvent
-
 from configparser import ConfigParser
 
 
